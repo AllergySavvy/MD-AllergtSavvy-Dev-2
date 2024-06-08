@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/container_group"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+>
+
+        <ImageView
+            android:id="@+id/image_rectangle1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/image_rectangle1" />
+
+        <TextView
+            android:id="@+id/text_chocolate"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="88dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="5.5dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="@string/ingredients_name"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/image_chocolate_bar"
+            android:layout_width="68dp"
+            android:layout_height="61dp"
+            android:layout_gravity="top|start"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/image_chocolate_bar" />
+    </FrameLayout>
+
+</androidx.cardview.widget.CardView>

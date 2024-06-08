@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.FragmentPage.HomeFragment">
+
+    <TextView
+
+        android:id="@+id/txt_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="72dp"
+        android:text="@string/welcome_text"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="244dp"
+        android:text="@string/username"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/txt_welcome"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:layout_width="88dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@+id/searchView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/tv_username"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="46dp"
+        android:background="@drawable/bg_searchbar"
+        android:inputType="textNoSuggestions"
+        android:padding="5dp"
+        app:defaultQueryHint="@string/search"
+        app:iconifiedByDefault="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_welcome"
+        app:queryBackground="@android:color/transparent" />
+
+    <ImageView
+        android:id="@+id/image_ellipse"
+        android:layout_width="363dp"
+        android:layout_height="338dp"
+        android:layout_gravity="top|start"
+        android:layout_marginTop="156dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/image_ellipse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_healthy_food_message"
+        android:layout_width="98dp"
+        android:layout_height="104dp"
+        android:layout_gravity="top|start"
+        android:layout_marginTop="264dp"
+        android:layout_marginEnd="84dp"
+        android:gravity="start|top"
+        android:includeFontPadding="false"
+        android:lineHeight="24dp"
+        android:text="@string/text_banner"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_boy_cook"
+        android:layout_width="286dp"
+        android:layout_height="216dp"
+        android:layout_gravity="top|start"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="184dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/image_boy_cook"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+                android:id="@+id/section_popular_ingred"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="36dp"
+                app:layout_constraintTop_toBottomOf="@+id/image_boy_cook">
+
+        <TextView
+            android:id="@+id/pop_ingredients"
+            android:layout_width="307dp"
+            android:layout_height="wrap_content"
+            android:text="@string/pop_ingred"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="@string/see_all"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="36dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"/>
+
+                <HorizontalScrollView
+                    android:id="@+id/ingredients_scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/pop_ingredients">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_ingred"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:orientation="horizontal"
+                        tools:listitem="@layout/list_ingredients"/>
+
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/section_popular_recipe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="36dp"
+                app:layout_constraintTop_toBottomOf="@+id/section_popular_ingred">
+
+                <TextView
+                    android:id="@+id/pop_recipes"
+                    android:layout_width="308dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pop_recipe"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="@string/see_all"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="36dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"/>
+
+                <HorizontalScrollView
+                    android:id="@+id/recipes_scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/pop_ingredients">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_recipes"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:orientation="horizontal"
+                        tools:listitem="@layout/list_recipes"/>
+
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+
+    
+</androidx.constraintlayout.widget.ConstraintLayout>
