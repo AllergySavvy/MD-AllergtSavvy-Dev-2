@@ -21,19 +21,6 @@ class SecondPageFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_second_page, container, false)
 
-        val next = view.findViewById<Button>(R.id.btn_second_page)
-        val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager2)
-
-        next.setOnClickListener {
-            viewPager?.currentItem = 2
-        }
-
-        val skip = view.findViewById<TextView>(R.id.skip)
-        skip.setOnClickListener {
-            val intent = Intent(activity, WelcomeActivity::class.java)
-            startActivity(intent)
-        }
-
         return view
     }
 }

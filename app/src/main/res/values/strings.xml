@@ -40,7 +40,7 @@
     <string name="favorite">Favorites</string>
     <string name="profile">Profile</string>
     <string name="discover">Discover</string>
-    <string name="welcome_text">Welcome</string>
+    <string name="welcome_text">Welcome,</string>
     <string name="search">Search</string>
     <string name="text_banner">Healthy Food For Your Life</string>
     <string name="pop_ingred">Popular Ingredients</string>
@@ -65,4 +65,5 @@
     <string name="ingredients_name">Ingredients</string>
     <string name="fill_ingredient">Enter your allergy food ingredients</string>
     <string name="input_ingredient">Fill The Form</string>
+    <string name="enter_ingredient">Enter The Ingredients</string>
 </resources>

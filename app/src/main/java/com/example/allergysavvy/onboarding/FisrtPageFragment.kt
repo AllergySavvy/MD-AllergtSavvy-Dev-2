@@ -19,19 +19,6 @@ class FisrtPageFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_fisrt_page, container, false)
 
-        val next = view.findViewById<Button>(R.id.btn_first_page)
-        val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager2)
-
-        next.setOnClickListener {
-            viewPager?.currentItem = 1
-        }
-
-        val skip = view.findViewById<TextView>(R.id.skip)
-        skip.setOnClickListener {
-            val intent = Intent(activity, WelcomeActivity::class.java)
-            startActivity(intent)
-        }
-
         return view
     }
 }

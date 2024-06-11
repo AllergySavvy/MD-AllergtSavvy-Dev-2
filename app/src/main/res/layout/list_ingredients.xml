@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+
     android:layout_height="match_parent">
 
     <FrameLayout
@@ -42,4 +43,4 @@
             android:src="@drawable/image_chocolate_bar" />
     </FrameLayout>
 
-</androidx.cardview.widget.CardView>
+</FrameLayout>
