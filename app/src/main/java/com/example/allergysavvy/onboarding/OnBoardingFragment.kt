@@ -44,10 +44,8 @@ class OnBoardingFragment : Fragment() {
         btnNext.setOnClickListener {
             val currentItem = viewPager.currentItem
             if (currentItem < fragmentList.size - 1) {
-                // Move to next page
                 viewPager.currentItem = currentItem + 1
             } else {
-                // Navigate to WelcomeActivity if it's the last page
                 val intent = Intent(activity, WelcomeActivity::class.java)
                 startActivity(intent)
             }
